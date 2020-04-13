@@ -1,0 +1,133 @@
+$backcolor: black;
+$fontcolor: white;
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: Verdana, sans-serif;
+    background-color: $backcolor;
+    color: $fontcolor;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex: 13vh;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), $backcolor),
+        url("../code.jpg");
+    background-position: bottom;    
+    background-size: cover; 
+
+    
+    nav {
+        position: absolute;
+        right: 1em;
+        bottom: 0.1em;
+        ul {
+                 
+            display: flex;
+            list-style: none;
+            justify-content: right;
+                        
+        }
+        
+        li + li {
+            border-left: 2.5px solid white;
+        }
+
+        li {
+            
+            padding: 0.3em 0.57em;
+        }
+
+        a {
+            color: lightblue;
+            text-decoration: none;
+        }
+    }
+}
+
+main {  
+    flex: 80vh 0 0;
+    display: flex;
+    position: relative;
+    border-top: 5px solid white;
+    border-bottom: 2px solid white;
+    
+    > * {
+        flex: 50vw;
+        
+               
+        
+    }
+    .info {
+        padding: 3em 3.5em;
+        font-size: 1.7em;
+
+        h1, p {
+            text-align: center;
+            margin: 0.5em;
+        }
+
+        ul {
+            margin-top: 2em;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+
+            
+            li {
+                padding: 0.3em;
+                
+            }
+            
+            a {
+                font-size: 1.2em;
+                color:$fontcolor;
+                text-decoration: none;
+            }
+        }
+
+    }
+
+    .media {
+        max-height: 80vh;
+        background-image: linear-gradient(to right, rgba(255,0,0,0) 75%,$backcolor),
+        url("../header_covers/my_bw.jpg");
+        background-position: center; 
+        background-size: cover; 
+        
+    }
+
+    .media:after {
+        position: absolute;
+        left: 0;
+        top: -5px;
+        content: '';
+        background-image: linear-gradient(to left, rgba(255,0,0,0) 45%, $backcolor);        
+        width: 50vw;
+        height: 103%;
+        
+        
+    }
+
+}
+
+footer {
+    padding: 1em 2em;
+    text-align: right;
+
+    p {
+        font-size: 0.8em;
+    }
+
+}
