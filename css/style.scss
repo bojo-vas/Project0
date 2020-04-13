@@ -49,10 +49,7 @@ header {
             padding: 0.3em 0.57em;
         }
 
-        a {
-            color: lightblue;
-            text-decoration: none;
-        }
+        
     }
 }
 
@@ -91,9 +88,7 @@ main {
             }
             
             a {
-                font-size: 1.2em;
-                color:$fontcolor;
-                text-decoration: none;
+                font-size: 1.5em;
             }
         }
 
@@ -102,7 +97,7 @@ main {
     .media {
         max-height: 80vh;
         background-image: linear-gradient(to right, rgba(255,0,0,0) 75%,$backcolor),
-        url("../header_covers/my_bw.jpg");
+        url("../header_covers/my.jpg");
         background-position: center; 
         background-size: cover; 
         
@@ -130,4 +125,13 @@ footer {
         font-size: 0.8em;
     }
 
+}
+
+a {
+    color: $fontcolor;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightblue;
 }
