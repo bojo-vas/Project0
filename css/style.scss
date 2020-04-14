@@ -1,5 +1,5 @@
-$backcolor: black;
-$fontcolor: white;
+$backcolor: white;
+$fontcolor: rgba(5, 56, 114, 0.822);
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -23,15 +23,18 @@ header {
     flex: 13vh;
     position: relative;
     background-image: linear-gradient(to bottom, rgba(255,0,0,0), $backcolor),
-        url("../code.jpg");
+        url("../header_covers/12.jpg");
     background-position: bottom;    
     background-size: cover; 
 
     
     nav {
+        z-index: 10;
         position: absolute;
-        right: 1em;
-        bottom: 0.1em;
+        right: 0.5em;
+        bottom: 0.2em;
+        
+        
         ul {
                  
             display: flex;
@@ -41,15 +44,14 @@ header {
         }
         
         li + li {
-            border-left: 2.5px solid white;
+            border-left: 2.5px solid $fontcolor;
         }
 
         li {
-            
+            font-weight: bold;
             padding: 0.3em 0.57em;
         }
-
-        
+       
     }
 }
 
@@ -57,8 +59,8 @@ main {
     flex: 80vh 0 0;
     display: flex;
     position: relative;
-    border-top: 5px solid white;
-    border-bottom: 2px solid white;
+    border-top: 5px solid $fontcolor;
+    border-bottom: 2px solid $fontcolor;
     
     > * {
         flex: 50vw;
@@ -69,22 +71,41 @@ main {
     .info {
         padding: 3em 3.5em;
         font-size: 1.7em;
-
+        
+        
         h1, p {
             text-align: center;
-            margin: 0.5em;
+            margin-bottom: 0.5em;
+            // max-width: 60%;
+            
         }
-
+        
+        h1 {
+            text-shadow: 3px 2px 5px $fontcolor;
+        }
+        
         ul {
             margin-top: 2em;
             display: flex;
             list-style: none;
             justify-content: center;
-
+            
             
             li {
                 padding: 0.3em;
                 
+            }
+
+            li:nth-child(odd):hover{
+                // transform: scale(1.2);
+                transform: rotate(1turn);
+                transition: 1s;
+            }
+
+            li:nth-child(even):hover{
+                // transform: scale(1.2);
+                transform: rotate(-1turn);
+                transition: 1s;
             }
             
             a {
@@ -96,7 +117,7 @@ main {
 
     .media {
         max-height: 80vh;
-        background-image: linear-gradient(to right, rgba(255,0,0,0) 75%,$backcolor),
+        background-image: linear-gradient(to right, rgba(255,0,0,0) 70%,$backcolor),
         url("../header_covers/my.jpg");
         background-position: center; 
         background-size: cover; 
@@ -120,7 +141,11 @@ main {
 footer {
     padding: 1em 2em;
     text-align: right;
-
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), $backcolor),
+        url("../header_covers/12.jpg");
+    background-position: top;    
+    background-size: cover; 
+    
     p {
         font-size: 0.8em;
     }
@@ -130,8 +155,11 @@ footer {
 a {
     color: $fontcolor;
     text-decoration: none;
+    text-shadow: 2px 1px 5px $fontcolor;
+    
 }
 
 a:hover {
-    color: lightblue;
+    color: lightblue; 
+    
 }

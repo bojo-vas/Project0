@@ -7,8 +7,8 @@
 
 html {
   font-family: Verdana, sans-serif;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: rgba(5, 56, 114, 0.822);
 }
 
 body {
@@ -26,16 +26,17 @@ header {
       -ms-flex: 13vh;
           flex: 13vh;
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0)), to(black)), url("../code.jpg");
-  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), black), url("../code.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0)), to(white)), url("../header_covers/12.jpg");
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), white), url("../header_covers/12.jpg");
   background-position: bottom;
   background-size: cover;
 }
 
 header nav {
+  z-index: 10;
   position: absolute;
-  right: 1em;
-  bottom: 0.1em;
+  right: 0.5em;
+  bottom: 0.2em;
 }
 
 header nav ul {
@@ -49,10 +50,11 @@ header nav ul {
 }
 
 header nav li + li {
-  border-left: 2.5px solid white;
+  border-left: 2.5px solid rgba(5, 56, 114, 0.822);
 }
 
 header nav li {
+  font-weight: bold;
   padding: 0.3em 0.57em;
 }
 
@@ -64,8 +66,8 @@ main {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  border-top: 5px solid white;
-  border-bottom: 2px solid white;
+  border-top: 5px solid rgba(5, 56, 114, 0.822);
+  border-bottom: 2px solid rgba(5, 56, 114, 0.822);
 }
 
 main > * {
@@ -81,7 +83,11 @@ main .info {
 
 main .info h1, main .info p {
   text-align: center;
-  margin: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+main .info h1 {
+  text-shadow: 3px 2px 5px rgba(5, 56, 114, 0.822);
 }
 
 main .info ul {
@@ -99,14 +105,28 @@ main .info ul li {
   padding: 0.3em;
 }
 
+main .info ul li:nth-child(odd):hover {
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .info ul li:nth-child(even):hover {
+  -webkit-transform: rotate(-1turn);
+          transform: rotate(-1turn);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 main .info ul a {
   font-size: 1.5em;
 }
 
 main .media {
   max-height: 80vh;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(75%, rgba(255, 0, 0, 0)), to(black)), url("../header_covers/my.jpg");
-  background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 75%, black), url("../header_covers/my.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(255, 0, 0, 0)), to(white)), url("../header_covers/my.jpg");
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 70%, white), url("../header_covers/my.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -116,8 +136,8 @@ main .media:after {
   left: 0;
   top: -5px;
   content: '';
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(45%, rgba(255, 0, 0, 0)), to(black));
-  background-image: linear-gradient(to left, rgba(255, 0, 0, 0) 45%, black);
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(45%, rgba(255, 0, 0, 0)), to(white));
+  background-image: linear-gradient(to left, rgba(255, 0, 0, 0) 45%, white);
   width: 50vw;
   height: 103%;
 }
@@ -125,6 +145,10 @@ main .media:after {
 footer {
   padding: 1em 2em;
   text-align: right;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0)), to(white)), url("../header_covers/12.jpg");
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), white), url("../header_covers/12.jpg");
+  background-position: top;
+  background-size: cover;
 }
 
 footer p {
@@ -132,8 +156,9 @@ footer p {
 }
 
 a {
-  color: white;
+  color: rgba(5, 56, 114, 0.822);
   text-decoration: none;
+  text-shadow: 2px 1px 5px rgba(5, 56, 114, 0.822);
 }
 
 a:hover {
