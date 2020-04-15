@@ -1,12 +1,6 @@
 $backcolor: white;
 $fontcolor: rgba(5, 56, 114, 0.822);
 
-*, *:before, *:after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
 html {
     font-family: Verdana, sans-serif;
     background-color: $backcolor;
@@ -35,32 +29,36 @@ header {
         bottom: 0.2em;
         
         
-        ul {
-                 
+        ul {                 
             display: flex;
-            list-style: none;
-            justify-content: right;
-                        
+            list-style: none;                       
         }
         
         li + li {
-            border-left: 2.5px solid $fontcolor;
+            border-left: 2.5px solid rgb(215, 221, 233);
         }
 
         li {
             font-weight: bold;
             padding: 0.3em 0.57em;
+            font-size: 1rem;
         }
        
     }
 }
 
 main {  
-    flex: 80vh 0 0;
+    flex: 80vh;
     display: flex;
     position: relative;
-    border-top: 5px solid $fontcolor;
-    border-bottom: 2px solid $fontcolor;
+    border-top: 5px solid;
+    border-image: linear-gradient(to left, $fontcolor 20%,  $backcolor 130%);
+    border-image-slice: 1;
+    
+    background-image: linear-gradient(to left, rgba(255,0,0,0) 45%, $backcolor);
+    z-index: 100;
+    
+    
     
     > * {
         flex: 50vw;
@@ -69,15 +67,19 @@ main {
         
     }
     .info {
-        padding: 3em 3.5em;
-        font-size: 1.7em;
-        
-        
+        // padding: 3em 4.5em 1em 4.5em;
+        // font-size: 1.7em;  
+      
         h1, p {
             text-align: center;
             margin-bottom: 0.5em;
-            // max-width: 60%;
             
+                        
+        }
+
+        h1::selection, p::selection {
+            color: rgb(127, 164, 245);
+            background-color: $backcolor;
         }
         
         h1 {
@@ -97,51 +99,56 @@ main {
             }
 
             li:nth-child(odd):hover{
-                // transform: scale(1.2);
+                
                 transform: rotate(1turn);
                 transition: 1s;
             }
 
             li:nth-child(even):hover{
-                // transform: scale(1.2);
+                
                 transform: rotate(-1turn);
                 transition: 1s;
             }
             
             a {
-                font-size: 1.5em;
+                font-size: 2em;
             }
         }
 
     }
 
+    aside {
+        overflow: hidden;     
+        
+    }
+    
     .media {
-        max-height: 80vh;
-        background-image: linear-gradient(to right, rgba(255,0,0,0) 70%,$backcolor),
-        url("../header_covers/my.jpg");
+        background-image: linear-gradient(to right, rgba(255,0,0,0) 70%,$backcolor), linear-gradient(to left, rgba(255,0,0,0) 80%, $backcolor), 
+        url("../header_covers/my.jpg"), ;
+        width: 100%;
+        height: 100%;
         background-position: center; 
         background-size: cover; 
+        z-index: -1;
         
     }
 
-    .media:after {
-        position: absolute;
-        left: 0;
-        top: -5px;
-        content: '';
-        background-image: linear-gradient(to left, rgba(255,0,0,0) 45%, $backcolor);        
-        width: 50vw;
-        height: 103%;
-        
-        
+    .media:hover {
+        transform: scale(1.2);
+        transition: 8s;
     }
+
 
 }
 
 footer {
+    border-top: 3px solid;
+    border-image: linear-gradient(to left, $backcolor 0%, $fontcolor 80%);
+    border-image-slice: 1;
+    
     padding: 1em 2em;
     text-align: right;
-    background-image: linear-gradient(to bottom, rgba(255,0,0,0), $backcolor),
+    background-image:  linear-gradient(to bottom, rgba(255,0,0,0), $backcolor),
         url("../header_covers/12.jpg");
     background-position: top;    
     background-size: cover; 
@@ -161,5 +168,4 @@ a {
 
 a:hover {
     color: lightblue; 
-    
 }

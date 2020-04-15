@@ -1,10 +1,3 @@
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 html {
   font-family: Verdana, sans-serif;
   background-color: white;
@@ -44,30 +37,34 @@ header nav ul {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
 }
 
 header nav li + li {
-  border-left: 2.5px solid rgba(5, 56, 114, 0.822);
+  border-left: 2.5px solid #d7dde9;
 }
 
 header nav li {
   font-weight: bold;
   padding: 0.3em 0.57em;
+  font-size: 1rem;
 }
 
 main {
   -webkit-box-flex: 80vh;
-      -ms-flex: 80vh 0 0px;
-          flex: 80vh 0 0;
+      -ms-flex: 80vh;
+          flex: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  border-top: 5px solid rgba(5, 56, 114, 0.822);
-  border-bottom: 2px solid rgba(5, 56, 114, 0.822);
+  border-top: 5px solid;
+  -o-border-image: linear-gradient(to left, rgba(5, 56, 114, 0.822) 20%, white 130%);
+     border-image: -webkit-gradient(linear, right top, left top, color-stop(20%, rgba(5, 56, 114, 0.822)), color-stop(130%, white));
+     border-image: linear-gradient(to left, rgba(5, 56, 114, 0.822) 20%, white 130%);
+  border-image-slice: 1;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(45%, rgba(255, 0, 0, 0)), to(white));
+  background-image: linear-gradient(to left, rgba(255, 0, 0, 0) 45%, white);
+  z-index: 100;
 }
 
 main > * {
@@ -76,14 +73,19 @@ main > * {
           flex: 50vw;
 }
 
-main .info {
-  padding: 3em 3.5em;
-  font-size: 1.7em;
-}
-
 main .info h1, main .info p {
   text-align: center;
   margin-bottom: 0.5em;
+}
+
+main .info h1::-moz-selection, main .info p::-moz-selection {
+  color: #7fa4f5;
+  background-color: white;
+}
+
+main .info h1::selection, main .info p::selection {
+  color: #7fa4f5;
+  background-color: white;
 }
 
 main .info h1 {
@@ -120,29 +122,36 @@ main .info ul li:nth-child(even):hover {
 }
 
 main .info ul a {
-  font-size: 1.5em;
+  font-size: 2em;
+}
+
+main aside {
+  overflow: hidden;
 }
 
 main .media {
-  max-height: 80vh;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(255, 0, 0, 0)), to(white)), url("../header_covers/my.jpg");
-  background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 70%, white), url("../header_covers/my.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(255, 0, 0, 0)), to(white)), -webkit-gradient(linear, right top, left top, color-stop(80%, rgba(255, 0, 0, 0)), to(white)), url("../header_covers/my.jpg");
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 70%, white), linear-gradient(to left, rgba(255, 0, 0, 0) 80%, white), url("../header_covers/my.jpg");
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-size: cover;
+  z-index: -1;
 }
 
-main .media:after {
-  position: absolute;
-  left: 0;
-  top: -5px;
-  content: '';
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(45%, rgba(255, 0, 0, 0)), to(white));
-  background-image: linear-gradient(to left, rgba(255, 0, 0, 0) 45%, white);
-  width: 50vw;
-  height: 103%;
+main .media:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 8s;
+  transition: 8s;
 }
 
 footer {
+  border-top: 3px solid;
+  -o-border-image: linear-gradient(to left, white 0%, rgba(5, 56, 114, 0.822) 80%);
+     border-image: -webkit-gradient(linear, right top, left top, from(white), color-stop(80%, rgba(5, 56, 114, 0.822)));
+     border-image: linear-gradient(to left, white 0%, rgba(5, 56, 114, 0.822) 80%);
+  border-image-slice: 1;
   padding: 1em 2em;
   text-align: right;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0)), to(white)), url("../header_covers/12.jpg");

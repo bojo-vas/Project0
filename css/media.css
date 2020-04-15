@@ -1,0 +1,46 @@
+@media screen {
+    .info {
+        padding: 3em 4.5em 1em 4.5em;
+        font-size: 1.8em;  
+    }   
+
+    html {
+        font-size: 14px;
+    }
+
+    header {
+        flex: 13vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .info {
+        padding: 2.5em;
+        font-size: 1.3em;
+    }   
+
+    html {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .info {
+        padding: 1em;
+        font-size: 1em;
+    }   
+
+    html {
+        font-size: 10px;
+    }
+
+@media screen and (max-height: 800px) {
+    header {
+        flex: 5vh;
+    }
+}
+
+/* @media screen and (min-aspect-ratio: 8/5) {
+    
+} */
