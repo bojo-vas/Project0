@@ -15,12 +15,9 @@ body {
 }
 
 header {
-  -webkit-box-flex: 13vh;
-      -ms-flex: 13vh;
-          flex: 13vh;
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0)), to(white)), url("../header_covers/12.jpg");
-  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), white), url("../header_covers/12.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0)), to(white)), url("../images/12.jpg");
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), white), url("../images/12.jpg");
   background-position: bottom;
   background-size: cover;
 }
@@ -78,17 +75,17 @@ main .info h1, main .info p {
   margin-bottom: 0.5em;
 }
 
-main .info h1::-moz-selection, main .info p::-moz-selection {
+main .info h1::-moz-selection, main .info p::-moz-selection, main .info li::-moz-selection {
   color: #7fa4f5;
   background-color: white;
 }
 
-main .info h1::selection, main .info p::selection {
+main .info h1::selection, main .info p::selection, main .info li::selection {
   color: #7fa4f5;
   background-color: white;
 }
 
-main .info h1 {
+main .info h1, main .info h2 {
   text-shadow: 3px 2px 5px rgba(5, 56, 114, 0.822);
 }
 
@@ -107,20 +104,6 @@ main .info ul li {
   padding: 0.3em;
 }
 
-main .info ul li:nth-child(odd):hover {
-  -webkit-transform: rotate(1turn);
-          transform: rotate(1turn);
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-main .info ul li:nth-child(even):hover {
-  -webkit-transform: rotate(-1turn);
-          transform: rotate(-1turn);
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
 main .info ul a {
   font-size: 2em;
 }
@@ -130,20 +113,28 @@ main aside {
 }
 
 main .media {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(255, 0, 0, 0)), to(white)), -webkit-gradient(linear, right top, left top, color-stop(80%, rgba(255, 0, 0, 0)), to(white)), url("../header_covers/my.jpg");
-  background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 70%, white), linear-gradient(to left, rgba(255, 0, 0, 0) 80%, white), url("../header_covers/my.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(255, 0, 0, 0)), to(white)), -webkit-gradient(linear, right top, left top, color-stop(80%, rgba(255, 0, 0, 0)), to(white)), url("../images/my.jpg");
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 70%, white), linear-gradient(to left, rgba(255, 0, 0, 0) 80%, white), url("../images/my.jpg");
   width: 100%;
   height: 100%;
   background-position: center;
   background-size: cover;
-  z-index: -1;
+  -webkit-transition: 7s;
+  transition: 7s;
+}
+
+main .letter {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(255, 0, 0, 0)), to(white)), -webkit-gradient(linear, right top, left top, color-stop(80%, rgba(255, 0, 0, 0)), to(white)), url("../images/410.jpg");
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 70%, white), linear-gradient(to left, rgba(255, 0, 0, 0) 80%, white), url("../images/410.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 main .media:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition: 8s;
-  transition: 8s;
 }
 
 footer {
@@ -154,14 +145,28 @@ footer {
   border-image-slice: 1;
   padding: 1em 2em;
   text-align: right;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0)), to(white)), url("../header_covers/12.jpg");
-  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), white), url("../header_covers/12.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0)), to(white)), url("../images/12.jpg");
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), white), url("../images/12.jpg");
   background-position: top;
   background-size: cover;
 }
 
 footer p {
   font-size: 0.8em;
+}
+
+.rotate > li:nth-child(odd):hover {
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.rotate > li:nth-child(even):hover {
+  -webkit-transform: rotate(-1turn);
+          transform: rotate(-1turn);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 a {
@@ -172,5 +177,57 @@ a {
 
 a:hover {
   color: lightblue;
+}
+
+.contact h4 {
+  font-weight: normal;
+  margin-top: 0.5em;
+}
+
+#contactsss {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+#contactsss .pencil {
+  height: 8em;
+  margin-top: 6em;
+  margin-right: 2em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#contactsss .pencil img {
+  height: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#contactsss .pencil img:hover {
+  -webkit-transform: rotate(-0.02turn);
+          transform: rotate(-0.02turn);
+}
+
+#contactsss ul {
+  display: block;
+}
+
+#contactsss #contact_text li {
+  text-align: right;
+  padding: 0.635em 1em;
+  padding-left: 0;
+}
+
+#contactsss #contact_icon li {
+  text-align: left;
+  padding: 0;
 }
 /*# sourceMappingURL=style.css.map */
