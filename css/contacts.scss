@@ -1,0 +1,55 @@
+$backcolor: white;
+$fontcolor: rgba(5, 56, 114, 0.822);
+
+main {
+    .letter {
+        background-image: linear-gradient(to right, rgba(255,0,0,0) 70%, $backcolor), linear-gradient(to left, rgba(255,0,0,0) 80%, $backcolor), 
+        url("../images/410.jpg");
+    }
+}
+
+.contact {
+    h4 {
+        font-weight: normal;
+        margin-top: 0.5em;
+    }
+    }
+
+#contactsss {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-start;
+    
+    .pencil {
+        height: 8em;
+        margin-top: 6em;
+        margin-right: 2em;
+        user-select: none;
+        
+        
+        img {
+            height: 100%;
+            transition: 1s;
+        }
+
+        img:hover {
+            transform: rotate(-0.02turn);
+            
+        }
+    }
+
+    ul {
+        display: block;       
+    }
+
+    #contact_text li{
+        text-align: right;
+        padding: 0.635em 1em;
+        padding-left: 0;        
+    }
+
+    #contact_icon li {
+        text-align: left;
+        padding: 0;
+    }
+}

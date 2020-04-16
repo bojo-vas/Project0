@@ -1,0 +1,63 @@
+$backcolor: white;
+$fontcolor: rgba(5, 56, 114, 0.822);
+
+.about {
+    background-image: linear-gradient(to right, rgba(255,0,0,0) 70%, $backcolor), linear-gradient(to left, rgba(255,0,0,0) 80%, $backcolor),
+        url("../personal/rilski.jpg");
+    
+}
+
+.history {
+    max-width: 1300px;
+    padding: 0.3em 1em;
+    text-align: left;
+    font-size: 1.2em;
+    
+
+    h3 {
+        text-align: left;
+        margin: 0;
+        padding: 0.3em;
+        
+    }
+   
+    p, h3 {
+        text-indent: 1em;
+    }
+
+    img {
+        width: 100%;
+        padding: 0;
+        display: block;
+        // position: relative;
+        // left: -2em;
+        // top: -4em;
+        
+    }
+
+    img:hover {
+        opacity: 0.85;
+    }
+
+}
+
+.intext {
+    border: 0px solid black;
+    border-radius: 1em;
+    overflow: hidden;
+       
+}
+
+.right {
+    float: right;
+    margin: 0.2em 0 0 0.5em;
+}
+
+.left {
+    float: left;
+    margin: 0.2em 0.5em 0 0;
+
+}
+
+
+

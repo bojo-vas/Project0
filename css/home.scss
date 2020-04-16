@@ -1,0 +1,38 @@
+$backcolor: white;
+$fontcolor: rgba(5, 56, 114, 0.822);
+ 
+main {
+    .info {          
+        
+        h1, p {
+            text-align: center;
+            margin-bottom: 0.5em;                       
+        }
+
+        
+        ul {
+            margin-top: 2em;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            
+            
+            li {
+                padding: 0.3em; 
+            }
+                     
+            a {
+                font-size: 2em;
+            }
+        }
+    }
+
+    .bike {
+        background-image: linear-gradient(to right, rgba(255,0,0,0) 70%, $backcolor), linear-gradient(to left, rgba(255,0,0,0) 80%, $backcolor),
+        url("../images/my.jpg");
+    }
+    
+    
+    
+
+}

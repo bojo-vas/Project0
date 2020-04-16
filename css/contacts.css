@@ -1,0 +1,57 @@
+main .letter {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(255, 0, 0, 0)), to(white)), -webkit-gradient(linear, right top, left top, color-stop(80%, rgba(255, 0, 0, 0)), to(white)), url("../images/410.jpg");
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 70%, white), linear-gradient(to left, rgba(255, 0, 0, 0) 80%, white), url("../images/410.jpg");
+}
+
+.contact h4 {
+  font-weight: normal;
+  margin-top: 0.5em;
+}
+
+#contactsss {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+#contactsss .pencil {
+  height: 8em;
+  margin-top: 6em;
+  margin-right: 2em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#contactsss .pencil img {
+  height: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#contactsss .pencil img:hover {
+  -webkit-transform: rotate(-0.02turn);
+          transform: rotate(-0.02turn);
+}
+
+#contactsss ul {
+  display: block;
+}
+
+#contactsss #contact_text li {
+  text-align: right;
+  padding: 0.635em 1em;
+  padding-left: 0;
+}
+
+#contactsss #contact_icon li {
+  text-align: left;
+  padding: 0;
+}
+/*# sourceMappingURL=contacts.css.map */

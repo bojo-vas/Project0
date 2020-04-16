@@ -1,0 +1,48 @@
+.about {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(255, 0, 0, 0)), to(white)), -webkit-gradient(linear, right top, left top, color-stop(80%, rgba(255, 0, 0, 0)), to(white)), url("../personal/rilski.jpg");
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 70%, white), linear-gradient(to left, rgba(255, 0, 0, 0) 80%, white), url("../personal/rilski.jpg");
+}
+
+.history {
+  max-width: 1300px;
+  padding: 0.3em 1em;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.history h3 {
+  text-align: left;
+  margin: 0;
+  padding: 0.3em;
+}
+
+.history p, .history h3 {
+  text-indent: 1em;
+}
+
+.history img {
+  width: 100%;
+  padding: 0;
+  display: block;
+}
+
+.history img:hover {
+  opacity: 0.85;
+}
+
+.intext {
+  border: 0px solid black;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.right {
+  float: right;
+  margin: 0.2em 0 0 0.5em;
+}
+
+.left {
+  float: left;
+  margin: 0.2em 0.5em 0 0;
+}
+/*# sourceMappingURL=about.css.map */

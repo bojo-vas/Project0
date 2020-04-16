@@ -1,4 +1,4 @@
-@media screen {
+@media screen and (min-width: 801px) {
     .info {
         padding: 3em 4.5em 1em 4.5em;
         font-size: 1.8em;  
@@ -9,38 +9,48 @@
     }
 
     header {
-        flex: 13vh;
+        flex: 10vh 0 1;
     }
+
+    .intext {
+        max-width: 18em;
+        max-height: 15em;
+    }
+    
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .info {
         padding: 2.5em;
-        font-size: 1.3em;
     }   
 
-    html {
-        font-size: 12px;
+    aside {
+        display: none;
+    }
+
+    header {
+        flex: 7vh 0 1;
+    }
+
+    .intext {
+        max-width: 15em;
+        max-height: 15em;
+    }
+
+}    
+
+@media screen and (max-width: 475px) {
+    /* h3 {
+        clear: both;
+    } */
+    
+    .intext {
+        max-width: 100%;
     }
 }
-
-
-@media screen and (max-width: 320px) {
-    .info {
-        padding: 1em;
-        font-size: 1em;
-    }   
-
-    html {
-        font-size: 10px;
-    }
 
 @media screen and (max-height: 800px) {
     header {
-        flex: 5vh;
+        flex: 5vh 0 1;
     }
 }
-
-/* @media screen and (min-aspect-ratio: 8/5) {
-    
-} */
