@@ -8,35 +8,43 @@
     <link rel="stylesheet" href="css\all.css">
     <title>My Webpage</title>
 </head>
-<body oncontextmenu="return false">
+<body>
     <header>
         <nav>
             <ul>
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="about_me.html">About Me</a></li>
-                <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="./contacts.html">Contacts</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main oncontextmenu="return false">
         <aside>
-            <div class="media">  
+            <div class="media letter">  
                      <!-- only background -->
             </div>
         </aside>
-        <div class="info">
-            <h1>
-                Hello There!
-            </h1>
+        
+        <div class="info contact" >
             <article>
-                <p>My name is Bojidar, I am from Bulgaria and have an interest in programming, football and bikes (in mixed order :)). </p>
-                <p>Hope you enjoy my page. It is simple but made with all my love.</p>
-                <p>Feel free to contact me in any possible way!</p>
+                <h2>Contacts:</h2>
+                <h4>Feel free to contact me in any way possible:</h4>
             </article>
-            <article>
-                <ul class='rotate'>
-                    <li><a href="http://www.facebook.com/bojo.vasilev"><i class="fab fa-facebook"></i></a></li>
+            <article id="contactsss">
+                <div class="pencil">
+                    <img src="../images/pencil6.jpg" alt="pencil">
+                </div>
+                <ul id="contact_text">
+                    <li>Facebook</li>
+                    <li>Google</li>
+                    <li>GitHub</li>
+                    <li>Viber</li>
+                    <li>Skype</li>
+                    <li>WhatsApp</li>
+                </ul>
+                <ul class="rotate" id = "contact_icon">
+                    <li><a href="http://www.facebook.com/bojo.vasilev"> <i class="fab fa-facebook"></i></a></li>
                     <li><a href="mailto:bojo.vasilev@gmail.com"><i class="fas fa-at"></i></a></li>
                     <li><a href="https://github.com/bojo-vas"><i class="fab fa-github"></i></a></li>
                     <li><a href="viber://contact?number=%2B359886580600"><i class="fab fa-viber"></i></a></li>
@@ -44,7 +52,7 @@
                     <li><a href="https://wa.me/00359886580600"><i class="fab fa-whatsapp"></i></a></li>
                 </ul>
             </article>
-
+            
         </div>
     </main>
     <footer>
