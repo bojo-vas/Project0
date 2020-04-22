@@ -1,0 +1,78 @@
+body, .table {
+  font-family: Verdana, sans-serif;
+  background-color: white;
+  color: rgba(5, 56, 114, 0.822);
+}
+
+header ul {
+  margin-bottom: -0.15em;
+}
+
+main {
+  -ms-flex-preferred-size: 83vh;
+      flex-basis: 83vh;
+}
+
+.row {
+  height: 100%;
+}
+
+.carousel {
+  position: relative;
+  margin: 0 auto;
+  padding: 1em;
+  max-height: 70vh;
+  overflow: hidden;
+}
+
+h4 {
+  margin: 0.9em 0 0.5em 0;
+}
+
+article {
+  margin-left: 1em;
+}
+
+.table {
+  padding: 2em 0.2em 0 2em;
+  padding-top: 2em;
+  margin: 0 auto;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, rgba(255, 0, 0, 0)), to(white)), -webkit-gradient(linear, right top, left top, color-stop(40%, rgba(255, 0, 0, 0)), to(white)), url("../images/europe-map.jpg");
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 40%, white), linear-gradient(to left, rgba(255, 0, 0, 0) 40%, white), url("../images/europe-map.jpg");
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 0;
+  line-height: 1.2;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.table table {
+  color: rgba(5, 56, 114, 0.822);
+  text-shadow: 1px 1px 4px rgba(5, 56, 114, 0.822);
+}
+
+.table th {
+  background-color: rgba(12, 11, 11, 0.05);
+}
+
+.table tr:nth-child(odd) {
+  background-color: rgba(12, 11, 11, 0.05);
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 1em;
+  right: 2em;
+  z-index: 1;
+}
+
+.carousel-caption h5, .carousel-caption p {
+  text-align: right;
+  text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  z-index: 10;
+}
+/*# sourceMappingURL=gallery.css.map */

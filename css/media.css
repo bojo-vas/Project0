@@ -24,9 +24,10 @@
         padding: 2.5em;
     }   
 
-    aside {
+    aside, .table {
         display: none;
     }
+
 
     header {
         flex: 7vh 0 1;

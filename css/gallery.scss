@@ -1,0 +1,105 @@
+$backcolor: white;
+$fontcolor: rgba(5, 56, 114, 0.822);
+%body-shared {
+    font-family: Verdana, sans-serif;
+    background-color: $backcolor;
+    color: $fontcolor;
+}
+
+
+header {  
+    ul {
+        margin-bottom: -0.15em;
+        
+    }
+}
+
+body {
+    @extend %body-shared
+}
+
+main {
+    flex-basis: 83vh;
+    
+}
+
+.row {
+    height: 100%;
+}
+
+
+.carousel {
+    position: relative;
+    margin: 0 auto;
+    padding: 1em;
+    max-height: 70vh;
+    overflow: hidden;
+    
+}
+
+
+h4 {
+    margin: 0.9em 0 0.5em 0;
+}
+
+article {
+    margin-left: 1em;
+}
+
+.table {
+    @extend %body-shared;
+    padding: 2em 0.2em 0 2em;
+    padding-top: 2em;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, rgba(255,0,0,0) 40%, $backcolor), linear-gradient(to left, rgba(255,0,0,0) 40%, $backcolor),
+    url("../images/europe-map.jpg");
+    background-position: center; 
+    background-size: cover;
+    margin-bottom: 0;
+    line-height: 1.2;
+    transition: 2s;
+    
+    table {
+        color: $fontcolor;
+        text-shadow: 1px 1px 4px $fontcolor;
+    }
+
+    th {
+        background-color: rgba(12, 11, 11, 0.05);
+    }
+
+    tr:nth-child(odd) {
+        background-color:  rgba(12, 11, 11, 0.05);
+    }
+    
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 1em;
+    right: 2em;
+    z-index: 1;
+
+
+
+    h5, p {
+        text-align: right;
+        text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black;
+        // text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+        
+    }
+    
+}
+
+.carousel-control-prev, .carousel-control-next {
+    z-index: 10;
+    
+}
+
+// .carousel-control-prev {
+//     background-image:  linear-gradient(to left, rgba(255,0,0,0) 65%, $backcolor);
+// }
+
+// .carousel-control-next {
+//     background-image:  linear-gradient(to right, rgba(255,0,0,0) 65%, $backcolor);
+// }

@@ -1,6 +1,6 @@
 .about {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(255, 0, 0, 0)), to(white)), -webkit-gradient(linear, right top, left top, color-stop(80%, rgba(255, 0, 0, 0)), to(white)), url("../personal/rilski.jpg");
-  background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 70%, white), linear-gradient(to left, rgba(255, 0, 0, 0) 80%, white), url("../personal/rilski.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(255, 0, 0, 0)), to(white)), -webkit-gradient(linear, right top, left top, color-stop(80%, rgba(255, 0, 0, 0)), to(white)), url("../images/rilski.jpg");
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 70%, white), linear-gradient(to left, rgba(255, 0, 0, 0) 80%, white), url("../images/rilski.jpg");
 }
 
 .history {
