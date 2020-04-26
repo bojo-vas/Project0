@@ -17,6 +17,10 @@
         max-height: 15em;
     }
     
+    .history {
+        height: 82vh;
+        overflow: auto;
+    }
 }
 
 @media screen and (max-width: 800px) {
