@@ -52,10 +52,19 @@
     .intext {
         max-width: 100%;
     }
+
+    nav li {
+        font-size: 0.8em !important;
+    }
 }
 
+
 @media screen and (max-height: 800px) {
+    html {
+        font-size: 12px;
+    }
+    
     header {
-        flex: 5vh 0 1;
+        flex: 8vh 0 1;
     }
 }
